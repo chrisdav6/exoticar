@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "CaptureIt";
+  src: url("../fonts/CaptureIt.ttf");
+}
+
+/******BASE STYLES******/
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: #fff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  max-width: 1120px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+/********HEADER********/
+.pageHeader .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pageHeader {
+  padding: 2em 0;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.mainNav li {
+  display: inline;
+  margin-left: 70px;
+}
+
+.mainNav li a {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/********BANNER********/
+.banner {
+  height: 800px;
+  background: url(../img/banner.png)no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner-block h1 {
+  font-family: "CaptureIt", Arial, sans-serif;
+  font-size: 5.5rem;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+}
+
+.sub-title {
+  font-size: 2.25rem;
+  font-weight: 300;
+  margin: .5em 0 1.5em 0;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+}
+
+.learn-more {
+  background: #ca0500;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1em 2em;
+  border: 1px solid transparent;
+  transition: .3s;
+}
+
+.learn-more:hover {
+  background: #8d0300;
+  border: 1px solid #ca0500;
+}
+
+/******Media Queries******/
+@media(max-width: 768px) {
+  .pageHeader .container {
+    flex-direction: column;
+  }
+
+  .mainNav ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1em;
+  }
+
+  .mainNav li {
+    margin: .75em 0;
+  }
+
+  .banner-block {
+    margin-top: 15em;
+  }
+
+  .banner-block h1 {
+    font-size: 4rem;
+  }
+}
