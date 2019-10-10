@@ -47,6 +47,12 @@ body {
 .mainNav li a {
   text-transform: uppercase;
   color: #fff;
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.mainNav li a:hover {
+  color: #ca0500;
 }
 
 /********BANNER********/
@@ -84,8 +90,8 @@ body {
 }
 
 .learn-more:hover {
-  background: #8d0300;
   border: 1px solid #ca0500;
+  box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.5);
 }
 
 /********ARTICLES********/
@@ -146,6 +152,89 @@ h2::after {
   margin-bottom: 1em;
 }
 
+/********FOOTER********/
+footer {
+  padding: 3em 0;
+  background: #111;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-col {
+  flex: 1;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+h3::after {
+  /* kind of hacky! Not sure I like this! */
+  content: ".";
+  font-size: 0;
+  display: block;
+  height: 1px;
+  width: 80%;
+  background: #292929;
+  margin: 12px 0;
+}
+
+footer a {
+  color: #878787;
+  text-decoration: none;
+  transition: color .3s;
+  line-height: 1.6;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+.social ul {
+  display: flex;
+}
+
+.social a {
+  margin-right: .25em;
+  position: relative;
+  top: 0;
+  transition: .3s;
+  width: 44px;
+  height: 44px;
+  background: #000;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 44px;
+  display: block;
+  font-size: 25px;
+  color: #fff;
+}
+
+.fb:hover {
+  top: -3px;
+  color: #3C5A99;
+  background: #fff;
+}
+
+.tw:hover {
+  top: -3px;
+  color: #26a7de;
+  background: #fff;
+}
+
+.ig:hover {
+  top: -3px;
+  color: #5851DB;
+  background: #fff;
+}
+
+.copy {
+  color: #585858;
+  margin-top: 1em;
+}
 
 /******Media Queries******/
 @media(max-width: 768px) {
@@ -198,13 +287,30 @@ h2::after {
   }
 
   h2::after {
-    /* kind of hacky! Not sure I like this! */
-    content: ".";
-    font-size: 0;
-    display: block;
     height: 1px;
     width: 80%;
-    background: #ca0500;
     margin: 20px auto 0 auto;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer .container {
+    flex-direction: column;
+  }
+
+  .footer-col:not(:last-child) {
+    margin-bottom: 2em;
+  }
+
+  h3::after {
+    width: 80%;
+    background: #292929;
+    margin: 12px auto;
+  }
+
+  .social ul {
+    justify-content: center;
   }
 }
